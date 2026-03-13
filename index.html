@@ -6,28 +6,46 @@
     <title>Weather App</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/tokens.css" />
-
 </head>
 <body>
-    <header>
-        <h1>Weather App</h1>
-    </header>
+    <!-- Figma Asset URLs -->
+    <script>
+        const assets = {
+            sunIcon: "https://www.figma.com/api/mcp/asset/a446fb27-6998-4eda-a63b-8e5dec3215ed",
+            sunIconLarge: "https://www.figma.com/api/mcp/asset/31db9d95-eb5e-4bb3-8657-853fb83fa9c5",
+            sunIconFri: "https://www.figma.com/api/mcp/asset/c21ade2c-bc29-4eff-81d9-6fd48a372f98",
+            cloudSunIcon: "https://www.figma.com/api/mcp/asset/aa444322-9bec-41fe-aa4a-ba8c74b1ca07",
+            cloudRainIcon: "https://www.figma.com/api/mcp/asset/2009debf-91f1-4911-b1f2-38c753cce51b",
+            locationIcon: "https://www.figma.com/api/mcp/asset/0fcd5025-39b5-450d-9784-14d5c6d8150b",
+            windIcon: "https://www.figma.com/api/mcp/asset/5a911daa-45a3-46f6-8ca3-65dc8405d813",
+            sliderDot: "https://www.figma.com/api/mcp/asset/26cf390d-80b1-40bb-be8c-aa7470da4d0a",
+            bgImage: "https://www.figma.com/api/mcp/asset/054cd565-e154-4570-abb4-f7a63c5ca4f3"
+        };
+    </script>
 
     <main class="weather-container">
-        <section class="weather-card">
-            <div class="weather-header">
-                <h2>Monday</h2>
-                <p class="date">20 Jun 2022</p>
-            </div>
-                <div class="weather-temp">
-                    <p class="temperature">29 °C</p>
-                    <p class="condition">Sunny</p>
+        <!-- Left Card: Current Weather -->
+        <section class="weather-card" id="weatherCard">
+            <div class="weather-content">
+                <div class="weather-header">
+                    <h2 class="day-of-week">Monday</h2>
+                    <p class="date">20 Jun 2022</p>
+                </div>
+
+                <div class="weather-main">
+                    <img class="sun-icon" id="sunIconLarge" alt="Sunny" />
+                    <div class="temp-section">
+                        <p class="temperature">29 °C</p>
+                        <p class="condition">Sunny</p>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Right Card: Weather Details -->
         <section class="weather-details">
-            <div class="weather-metrics">
+            <!-- Metrics -->
+            <div class="metrics-section">
                 <div class="metric">
                     <p class="metric-label">PRECIPITATION</p>
                     <p class="metric-value">0%</p>
@@ -42,49 +60,66 @@
                 </div>
             </div>
 
-            <div class="forecast">
+            <!-- Forecast -->
+            <div class="forecast-section">
                 <div class="forecast-item">
-                    <div class="forecast-icon sunny"></div>
+                    <img class="forecast-icon" id="sunIconTue" alt="Sunny" />
                     <p class="forecast-day">Tue</p>
                     <p class="forecast-temp">30 °C</p>
                 </div>
                 <div class="forecast-item">
-                    <div class="forecast-icon cloudy"></div>
+                    <img class="forecast-icon" id="cloudSunIcon" alt="Cloudy" />
                     <p class="forecast-day">Wed</p>
                     <p class="forecast-temp">22 °C</p>
                 </div>
                 <div class="forecast-item">
-                    <div class="forecast-icon rainy"></div>
+                    <img class="forecast-icon" id="cloudRainIcon" alt="Rainy" />
                     <p class="forecast-day">Thu</p>
                     <p class="forecast-temp">06 °C</p>
                 </div>
                 <div class="forecast-item">
-                    <div class="forecast-icon sunny"></div>
+                    <img class="forecast-icon" id="sunIconFri" alt="Sunny" />
                     <p class="forecast-day">Fri</p>
                     <p class="forecast-temp">26 °C</p>
                 </div>
             </div>
 
+            <!-- Air Quality -->
             <div class="air-quality">
-                <h3>Air Quality</h3>
+                <div class="air-quality-header">
+                    <h3 class="air-quality-label">Air Quality</h3>
+                    <img class="wind-icon" id="windIcon" alt="Wind" />
+                </div>
                 <div class="quality-value">68%</div>
-                <div class="quality-slider">
-                    <div class="quality-bar">
-                        <div class="quality-fill"></div>
+                <div class="quality-bar">
+                    <div class="quality-fill">
+                        <img class="slider-dot" id="sliderDot" alt="Indicator" />
                     </div>
                 </div>
                 <p class="quality-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
             </div>
 
+            <!-- Location Button -->
             <button class="location-button">
-                <span class="location-icon">📍</span>
+                <img class="location-icon" id="locationIcon" alt="Location" />
                 New York City
             </button>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Weather App. All rights reserved.</p>
-    </footer>
+    <script>
+        // Load Figma assets
+        document.getElementById('sunIconLarge').src = assets.sunIconLarge;
+        document.getElementById('sunIconTue').src = assets.sunIcon;
+        document.getElementById('cloudSunIcon').src = assets.cloudSunIcon;
+        document.getElementById('cloudRainIcon').src = assets.cloudRainIcon;
+        document.getElementById('sunIconFri').src = assets.sunIconFri;
+        document.getElementById('locationIcon').src = assets.locationIcon;
+        document.getElementById('windIcon').src = assets.windIcon;
+        document.getElementById('sliderDot').src = assets.sliderDot;
+        
+        // Set background image for weather card
+        document.getElementById('weatherCard').style.backgroundImage = `url('${assets.bgImage}')`;
+    </script>
 </body>
 </html>
