@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--text-size var(--font-size));
+  background-color: var(--app-background);
+  color: var(--text-color);
+}

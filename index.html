@@ -4,15 +4,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+
 </head>
 <body>
     <header>
         <h1>Weather App</h1>
     </header>
 
-    <main>
-        <!-- Main content goes here -->
+    <main class="weather-container">
+        <section class="weather-card">
+            <div class="weather-header">
+                <h2>Monday</h2>
+                <p class="date">20 Jun 2022</p>
+            </div>
+                <div class="weather-temp">
+                    <p class="temperature">29 °C</p>
+                    <p class="condition">Sunny</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-details">
+            <div class="weather-metrics">
+                <div class="metric">
+                    <p class="metric-label">PRECIPITATION</p>
+                    <p class="metric-value">0%</p>
+                </div>
+                <div class="metric">
+                    <p class="metric-label">HUMIDITY</p>
+                    <p class="metric-value">42%</p>
+                </div>
+                <div class="metric">
+                    <p class="metric-label">WIND</p>
+                    <p class="metric-value">3 km/h</p>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <div class="forecast-item">
+                    <div class="forecast-icon sunny"></div>
+                    <p class="forecast-day">Tue</p>
+                    <p class="forecast-temp">30 °C</p>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-icon cloudy"></div>
+                    <p class="forecast-day">Wed</p>
+                    <p class="forecast-temp">22 °C</p>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-icon rainy"></div>
+                    <p class="forecast-day">Thu</p>
+                    <p class="forecast-temp">06 °C</p>
+                </div>
+                <div class="forecast-item">
+                    <div class="forecast-icon sunny"></div>
+                    <p class="forecast-day">Fri</p>
+                    <p class="forecast-temp">26 °C</p>
+                </div>
+            </div>
+
+            <div class="air-quality">
+                <h3>Air Quality</h3>
+                <div class="quality-value">68%</div>
+                <div class="quality-slider">
+                    <div class="quality-bar">
+                        <div class="quality-fill"></div>
+                    </div>
+                </div>
+                <p class="quality-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+            </div>
+
+            <button class="location-button">
+                <span class="location-icon">📍</span>
+                New York City
+            </button>
+        </section>
     </main>
 
     <footer>

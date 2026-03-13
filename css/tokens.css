@@ -1,0 +1,83 @@
+:root {
+  /* Colors */
+  --color-navy-blue-100: #222831;
+  --color-navy-blue-80: #222831;
+  --color-white-100: #FFFFFF;
+  --color-black-100: #000000;
+  --color-green-90: #4DF51F;
+  --color-blue-90: #1E90FF;
+  --color-red-90: #FF0004;
+
+  /* Layout - Spacing */
+  --spacing-4: 4px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-20: 20px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+
+  /* Layout - Sizing */
+  --size-icon-small: 24px;
+  --size-icon-medium: 32px;
+  --size-icon-large: 48px;
+  --size-card-width: 400px;
+  --size-card-height: 300px;
+
+  /* Layout - Border Radius */
+  --radius-box-navy-blue: 24px;
+  --radius-box-image: 30px;
+  --radius-weather-capsule: 10px;
+  --radius-airquality-box: 10px;
+  --radius-airquality-button: 10px;
+  --radius-box-navy-blue: var(--radius-box-navy-blue-30);
+  --radius-box-image: var(--radius-box-navy-blue-30);
+
+  /* Typography - Font Sizes */
+  --font-size-12: 12px;
+  --font-size-14: 14px;
+  --font-size-24: 24px;
+  --font-size-26: 26px;
+
+  /* Text Sizes */
+  --text-size: var(--font-size-22);
+
+  /* design  */
+  --app-background: var(--color-navy-blue-100);
+  
+  /* colors */
+  --text-color: var(--color-white-100);
+
+  /* Typography - Font Family */
+  --font-family-montserrat: Montserrat, sans-serif;
+  --font-family-roboto: Roboto, sans-serif;
+  --heading-font-primary: var(--font-family-montserrat);
+  --heading-font-primary: var(--font-family-Roboto);
+
+  /* Border Radius */
+  --radius-box-navy-blue: 24px;
+  --radius-box-image: 30px;
+  --radius-weather-capsule: 10px;
+  --radius-airquality-box: 10px;
+  --radius-airquality-button: 10px;
+
+  /* Semantic - Backgrounds */
+  --bg-primary: var(--color-navy-blue-100);
+  --bg-secondary: var(--color-navy-blue-80);
+  --bg-surface: var(--color-white-100);
+
+  /* Semantic - Text */
+  --text-primary: var(--color-white-100);
+  --text-secondary: var(--color-white-100);
+  --text-dark: var(--color-black-100);
+
+  /* Semantic - Accents */
+  --accent-primary: #7DD3C0;
+  --accent-success: var(--color-green-90);
+  --accent-danger: var(--color-red-90);
+  --accent-info: var(--color-blue-90);
+
+
+}
+
